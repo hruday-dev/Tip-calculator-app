@@ -1,0 +1,63 @@
+:root{
+--Green400: hsl(172, 67%, 45%);
+
+/* Neutral */
+
+--Green900: hsl(183, 100%, 15%);
+--Grey500: hsl(186, 14%, 43%);
+--Grey400: hsl(184, 14%, 56%);
+--Grey200: hsl(185, 41%, 84%);
+--Grey50: hsl(189, 47%, 97%);
+}
+*{
+    margin: 0;
+    font-family: "Space Mono", sans-serif;
+}
+html{
+    font-size: 24px;
+}
+.logo{
+    text-align: center;
+    padding: 2em;
+}
+main{
+    background-color: var(--Grey200);
+}
+#calculator{
+    padding: 2em;
+    border-radius: 1rem 1rem 0 0;
+    font-size: medium;
+    font-weight: 700;
+    color: var(--Grey500);
+    background-color: white;
+}
+#bill{
+    background-image: url('../images/icon-dollar.svg');
+}
+#people{
+    background-image: url('../images/icon-person.svg');
+}
+#bill,#people{
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: left 10px center;
+    background-color: var(--Grey50);
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    color: var(--Green900);
+    margin: 5px 0;
+    width: 90%;
+    font-weight: 700;
+}
+.tipbtn{
+    display: grid;
+    grid-template-columns: repeat(2,43%);
+    gap: 1em;
+    margin: 1em 0;
+}
+.tipbtn > button,#custom{
+    font-size: 1rem;
+    font-weight: 700;
+}
