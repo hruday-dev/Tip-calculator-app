@@ -21,34 +21,45 @@
     </div>
     <section id="calculator">
       <form>
-        <label for="Bill">Bill</label> <br>
-        <input type="number" name="bill" id="bill"> <br>
-
-        <label for="tip">Select Tip %</label><br>
-        <div class="tipbtn">
-          <button>5%</button>
-          <button>10%</button>
-          <button>15%</button>
-          <button>25%</button>
-          <button>50%</button>
-          <input type="text" placeholder="Custom" id="custom"></input>
+        <div class="bill">
+          <label for="Bill">Bill</label> <br>
+          <input type="number" name="bill" id="bill" value="0"> <br>
         </div>
-        <label for="people">Number of People</label><br>
-        <input type="number" name="people" id="people">
+        <div class="tips">
+          <label for="tip">Select Tip %</label><br>
+          <div class="tipbtn">
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <input type="text" placeholder="Custom" id="custom"></input>
+          </div>
+        </div>
+        <div class="persons">
+          <label for="people">Number of People</label><br>
+          <input type="number" name="people" id="people" value="0">
+        </div>
       </form>
-    <div class="total">
-      <div class="tipAmt">
-        <p>Tip Amount</p>
-        <p>/ person</p>
-        <p class="tiptotal"><small>$</small>0</p>
+      <div class="total">
+        <section>
+          <div class="Amt">
+            <div class="left">
+            <p>Tip Amount</p>
+            <p><small>/ person</small></p>
+            </div>
+            <p class="totalamt"><small>$</small>0</p>
+          </div>
+          <div class="Amt">
+            <div class="left">
+              <p>Total</p>
+              <p><small>/ person</small></p>
+            </div>
+            <p class="totalamt"><small>$</small>0</p>
+          </div>
+        </section>
+        <button type="reset">RESET</button>
       </div>
-      <div class="tipAmt">
-        <p>Total</p>
-        <p>/ person</p>
-        <p class="tiptotal"><small>$</small>0</p>
-      </div> 
-      <button>Reset</button>
-    </div>
     </section>
   </main>
   <script src="./Js/script.js"></script>

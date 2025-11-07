@@ -12,6 +12,7 @@
 *{
     margin: 0;
     font-family: "Space Mono", sans-serif;
+    box-sizing: border-box;
 }
 html{
     font-size: 24px;
@@ -24,12 +25,15 @@ main{
     background-color: var(--Grey200);
 }
 #calculator{
-    padding: 2em;
+    padding: 1.5em;
     border-radius: 1rem 1rem 0 0;
     font-size: medium;
     font-weight: 700;
     color: var(--Grey500);
     background-color: white;
+}
+form{
+    padding: 0 0.5em;
 }
 #bill{
     background-image: url('../images/icon-dollar.svg');
@@ -40,24 +44,104 @@ main{
 #bill,#people{
     background-repeat: no-repeat;
     background-size: 10px;
-    background-position: left 10px center;
+    background-position: left 15px center;
     background-color: var(--Grey50);
     text-align: right;
     border: none;
+    border-radius: 5px;
     outline: none;
+    width: 100%;
     padding: 10px 12px;
     color: var(--Green900);
     margin: 5px 0;
-    width: 90%;
     font-weight: 700;
+    font-size: 0.8rem;
 }
 .tipbtn{
     display: grid;
-    grid-template-columns: repeat(2,43%);
+    grid-template-columns: repeat(2,47%);
     gap: 1em;
     margin: 1em 0;
 }
 .tipbtn > button,#custom{
     font-size: 1rem;
     font-weight: 700;
+    padding: 5px 0;
+    border-radius: 5px;
+    border: none;
+}
+.tipbtn > button{
+    background-color: var(--Green900);
+    color: white;
+}
+#custom{
+    text-align: right;
+    background-color: var(--Grey50);
+    padding-right: 12px;
+}
+.total{
+    background-color: var(--Green900);
+    margin: 1em 0;
+    padding: 2em 1.5em 1.5em;
+    border-radius: 12px;
+}
+.Amt{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-bottom: 15px;
+}
+.left > p:first-child{
+    color: white;
+}
+.totalamt{
+    color: var(--Green400);
+    font-size: 1.5rem;
+}
+button[type="reset"]{
+    border: none;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--Green900);
+    background-color: var(--Green400);
+    padding: 0.5em;
+}
+@media  screen and (min-width:440px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    #calculator{
+        width: 400px;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+@media  screen and (min-width: 50em) {
+    #calculator{
+        width: 800px;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    form{
+        width: 60%;
+    }
+    .tipbtn{
+        grid-template-columns: repeat(3,30.5%);
+    }
+    input{
+        width: 100%;
+    }
+    .total{
+        width: 40%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
