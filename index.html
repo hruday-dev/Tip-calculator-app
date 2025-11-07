@@ -20,10 +20,10 @@
       <img src="./images/logo.svg" alt="logo">
     </div>
     <section id="calculator">
-      <form>
+      <form novalidate>
         <div class="bill">
-          <label for="Bill">Bill</label> <br>
-          <input type="number" name="bill" id="bill" value="0"> <br>
+          <label for="bill">Bill</label> <br>
+          <input type="number" name="bill" id="bill" placeholder="0"> <br>
         </div>
         <div class="tips">
           <label for="tip">Select Tip %</label><br>
@@ -33,12 +33,14 @@
             <button>15%</button>
             <button>25%</button>
             <button>50%</button>
-            <input type="text" placeholder="Custom" id="custom"></input>
+            <input type="text" placeholder="Custom" id="tip"></input>
           </div>
         </div>
         <div class="persons">
-          <label for="people">Number of People</label><br>
-          <input type="number" name="people" id="people" value="0">
+          <div class="errormessage">
+            <label for="people">Number of People</label><p id="error"></p>
+          </div>
+          <input type="number" name="people" id="people" placeholder="0">
         </div>
       </form>
       <div class="total">
@@ -48,17 +50,17 @@
             <p>Tip Amount</p>
             <p><small>/ person</small></p>
             </div>
-            <p class="totalamt"><small>$</small>0</p>
+            <p class="totalamt tiptotal">0.00</p>
           </div>
           <div class="Amt">
             <div class="left">
               <p>Total</p>
               <p><small>/ person</small></p>
             </div>
-            <p class="totalamt"><small>$</small>0</p>
+            <p class="totalamt amounttotal">0.00</p>
           </div>
         </section>
-        <button type="reset">RESET</button>
+        <button type="reset" id="reset">RESET</button>
       </div>
     </section>
   </main>

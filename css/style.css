@@ -9,6 +9,9 @@
 --Grey200: hsl(185, 41%, 84%);
 --Grey50: hsl(189, 47%, 97%);
 }
+
+/* button clicked */
+
 *{
     margin: 0;
     font-family: "Space Mono", sans-serif;
@@ -49,7 +52,6 @@ form{
     text-align: right;
     border: none;
     border-radius: 5px;
-    outline: none;
     width: 100%;
     padding: 10px 12px;
     color: var(--Green900);
@@ -57,13 +59,16 @@ form{
     font-weight: 700;
     font-size: 0.8rem;
 }
+input:focus{
+    outline: 2px solid var(--Green400);
+}
 .tipbtn{
     display: grid;
     grid-template-columns: repeat(2,47%);
     gap: 1em;
     margin: 1em 0;
 }
-.tipbtn > button,#custom{
+.tipbtn > button,#tip{
     font-size: 1rem;
     font-weight: 700;
     padding: 5px 0;
@@ -74,7 +79,11 @@ form{
     background-color: var(--Green900);
     color: white;
 }
-#custom{
+/* .tipbtn > button:hover{
+    background-color: var(--Green400);
+    color: var(--Green900);
+} */
+#tip{
     text-align: right;
     background-color: var(--Grey50);
     padding-right: 12px;
@@ -107,6 +116,18 @@ button[type="reset"]{
     background-color: var(--Green400);
     padding: 0.5em;
 }
+.errormessage{
+    display: flex;
+    justify-content: space-between;
+}
+#error{
+    color: red;
+}
+
+button.clicked{
+    background-color: var(--Green400);
+    color: var(--Green900);
+}
 @media  screen and (min-width:440px) {
     main{
         display: flex;
@@ -120,6 +141,7 @@ button[type="reset"]{
         border-radius: 1rem;
         margin-bottom: 1rem;
     }
+    
 }
 @media  screen and (min-width: 50em) {
     #calculator{
