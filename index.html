@@ -20,7 +20,7 @@
       <img src="./images/logo.svg" alt="logo">
     </div>
     <section id="calculator">
-      <form novalidate>
+      <form novalidate form="bill-form">
         <div class="bill">
           <label for="bill">Bill</label> <br>
           <input type="number" name="bill" id="bill" placeholder="0"> <br>
@@ -48,19 +48,19 @@
           <div class="Amt">
             <div class="left">
             <p>Tip Amount</p>
-            <p><small>/ person</small></p>
+            <p>/ person</p>
             </div>
             <p class="totalamt tiptotal">0.00</p>
           </div>
           <div class="Amt">
             <div class="left">
               <p>Total</p>
-              <p><small>/ person</small></p>
+              <p>/ person</p>
             </div>
             <p class="totalamt amounttotal">0.00</p>
           </div>
         </section>
-        <button type="reset" id="reset">RESET</button>
+        <button type="reset" id="reset" form="bill-form">RESET</button>
       </div>
     </section>
   </main>
